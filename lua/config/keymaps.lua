@@ -8,10 +8,10 @@ map("n", "<leader>rch", function()
   vim.cmd(":%s/^\\s*#.*$//g")
 end, { desc = "Remove Comments Hashtag" })
 
-map("n", "<leader>bda", function()
+map("n", "<leader>ba", function()
   vim.cmd(":bufdo bd")
 end, { desc = "Close all buffers" })
 
-map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down with indent" })
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down with indent", silent = true })
 
-map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up with indent" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up with indent", silent = true })
