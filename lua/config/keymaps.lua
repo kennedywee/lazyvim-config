@@ -12,6 +12,8 @@ map("n", "<leader>ba", function()
   vim.cmd(":bufdo bd")
 end, { desc = "Close all buffers" })
 
+map("n", "<C-c>", "ggVGy", { desc = "Yank all lines in file", silent = true })
+
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down with indent", silent = true })
 
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up with indent", silent = true })
